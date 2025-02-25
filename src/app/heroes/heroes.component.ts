@@ -10,8 +10,4 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent {
   heroes: Hero[] = HEROES;
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
 }
