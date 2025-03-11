@@ -19,9 +19,18 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    //this.heroes = this.heroService.getHeroes();
-    this.heroService.getHeroes().forEach((x: Hero, i: number) => {
-      setTimeout(() => this.heroes.push(x), i * 250);
+    this.heroService.getHeroes().subscribe({
+      next: (value: Hero[]) => {
+        value.forEach((x: Hero, i: number) => {
+          setTimeout(() => this.heroes.push(x), i * 250);
+        });
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('Completato');
+      }
     });
   }
 
