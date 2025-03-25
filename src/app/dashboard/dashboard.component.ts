@@ -34,6 +34,6 @@ export class DashboardComponent {
         for (let i: number = 0; i < n.length; i++) {
           this.heroes.push(heroes[n[i]]);
         }
-      });
+    });
   }
 }
