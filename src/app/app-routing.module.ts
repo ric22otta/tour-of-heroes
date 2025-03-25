@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent }
 ];
 
-@NgModule({ 
+@NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
